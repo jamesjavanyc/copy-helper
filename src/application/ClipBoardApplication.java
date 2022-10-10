@@ -1,14 +1,21 @@
-package application;/**
+package application;
+
+import ui.BoardFrame;
+
+/**
  * @projectName:application
  * @className: ClipBoardApplication
- * @description: 
+ * @description:
  * @TODO:
  * @author: James
  * @createDate: 8/26/2022
- * @updateUser: user 
+ * @updateUser: user
  * @updateDate: datetime
- * @updateRemark: 
+ * @updateRemark:
  * @version: v1.0
  */
 public class ClipBoardApplication {
+    public static void run(){
+        BoardFrame frame = new BoardFrame("Clipboard text formatter");
+    }
 }

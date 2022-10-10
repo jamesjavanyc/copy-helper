@@ -3,6 +3,11 @@ package clipboard;
 import java.awt.*;
 import java.awt.datatransfer.*;
 
+import listener.EnableBufferingListener;
+import listener.EnableConnectorListener;
+import listener.EnableTemplateListener;
+import ui.BoardFrame;
+
 
 /**
  * @projectName:PACKAGE_NAME
@@ -16,62 +21,102 @@ import java.awt.datatransfer.*;
  * @updateRemark:
  * @version: v1.0
  */
-public class BoardFrame implements ClipboardOwner{
+public class ClipBoard implements ClipboardOwner{
 
     private static final Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 
     private static String boardText = "";
 
+    public static void setConnector(String connector) {
+        ClipBoard.connector = connector;
+    }
+
     private static String connector = "";
 
     private static Integer currentIndex = 0;
 
-    public BoardFrame(){
-        // 将剪切板的所有者设置为自己, 当所有者为自己时，才能监控下一次剪切板的变动, clipboard.getContents(null) 获取当前剪切板的内容
+    private static TextArea applicationTextArea = BoardFrame.getTextAreaInstance();
+
+
+    public ClipBoard(){
         clipboard.setContents(clipboard.getContents(null), this);
     }
 
 
     @Override
     public void lostOwnership(Clipboard clipboard, Transferable contents) {
-        try {
-            Thread.sleep(1000);
-            String text = null;
-            if (clipboard.isDataFlavorAvailable(DataFlavor.stringFlavor)){
-                Object data = clipboard.getData(DataFlavor.stringFlavor);
-                if (data instanceof String) text = (String) data;
-                if(currentIndex == 0){
-                    boardText = boardText + data;
-                }else{
-                    boardText = boardText + connector + data;
+        if(!EnableBufferingListener.enabled)  return;
+        if(EnableConnectorListener.enabled){
+            try {
+                Thread.sleep(500);
+                String text = null;
+                if (clipboard.isDataFlavorAvailable(DataFlavor.stringFlavor)){
+                    Object data = clipboard.getData(DataFlavor.stringFlavor);
+                    if (data instanceof String) text = (String) data;
+                    if(currentIndex == 0){
+                        boardText = boardText + text;
+                    }else{
+                        boardText = boardText + connector + text;
+                    }
+                    currentIndex++;
                 }
-                currentIndex++;
+                applicationTextArea.setText(boardText);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }finally {
+                Transferable text = new StringSelection(boardText);
+                clipboard.setContents(text, this);
+                System.out.println("new copy: "+ boardText);
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }finally {
-            Transferable text = new StringSelection(boardText);
-            clipboard.setContents(text, this);
-            System.out.println("new copy: "+ boardText);
+        }else if(EnableTemplateListener.enabled){
+            try{
+                Thread.sleep(500);
+                if (clipboard.isDataFlavorAvailable(DataFlavor.stringFlavor)) {
+                    Object data = clipboard.getData(DataFlavor.stringFlavor);
+                    String text = "";
+                    if (data instanceof String) text = (String) data;
+                    String replaced = boardText.replaceFirst("/data/", text);
+                    boardText = replaced;
+                }
+                applicationTextArea.setText(boardText);
+            }catch(Exception e){
+                e.printStackTrace();
+            }finally {
+                Transferable text = new StringSelection(boardText);
+                clipboard.setContents(text, this);
+                System.out.println("new copy: "+ boardText);
+            }
         }
     }
 
 
     public void setClipboardText(String text){
+        if(!EnableBufferingListener.enabled) {
+            boardText = text;
+            return;
+        };
         boardText = text;
         clipboard.setContents(new StringSelection(boardText), this);
         System.out.println("boardText changed: "+text);
     }
 
 
-    private static BoardFrame singleton;
+    private static ClipBoard singleton;
 
-    public static BoardFrame getInstance(){
+    public static ClipBoard getInstance(){
         if(singleton == null){
-            BoardFrame board = new BoardFrame();
+            ClipBoard board = new ClipBoard();
             singleton = board;
         }
         return singleton;
     }
+
+    public String getBoardText(){
+        return boardText;
+    }
+
+    public void resetCurrentIndex(){
+        currentIndex = 0;
+    };
 
 }

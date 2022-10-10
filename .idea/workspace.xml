@@ -1,14 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e2313b8-c05b-472a-b363-5668d9706214" name="Changes" comment="" />
+    <list default="true" id="4e2313b8-c05b-472a-b363-5668d9706214" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/ClipBoardApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/ClipBoardApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clipboard/ClipBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/clipboard/ClipBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/ClickStateButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/ClickStateButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/LabelTextInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/LabelTextInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/listener/BoardTextListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/listener/BoardTextListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/listener/ClearTextAreaListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/listener/ClearTextAreaListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/listener/EnableBufferingListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/listener/EnableBufferingListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/listener/EnableConnectorListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/listener/EnableConnectorListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/listener/EnableListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/listener/EnableListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/listener/EnableTemplateListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/listener/EnableTemplateListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/listener/StateButtonClickListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/listener/StateButtonClickListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/listener/TemplateLockListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/listener/TemplateLockListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ClipBoardUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ClipBoardUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/BoardFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/BoardFrame.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2DtkVotgYREYM8cS9MneLApOxyO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -20,9 +51,26 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/mini-tools/copy-buffer",
+    "nodejs_package_manager_path": "npm"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="text-copy-buffer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -31,7 +79,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661525796632</updated>
+      <workItem from="1661525798029" duration="38000" />
+      <workItem from="1661525855808" duration="25493000" />
+      <workItem from="1661621095791" duration="3124000" />
+      <workItem from="1661624323674" duration="37000" />
+      <workItem from="1665436567809" duration="65000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

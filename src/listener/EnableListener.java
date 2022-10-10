@@ -4,7 +4,6 @@ import clipboard.ClipBoard;
 import component.ClickStateButton;
 
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
 /**
  * @projectName:listener
@@ -18,27 +17,25 @@ import java.awt.event.MouseListener;
  * @updateRemark:
  * @version: v1.0
  */
-public class EnableBufferingListener extends StateButtonClickListener {
+public class EnableListener extends StateButtonClickListener {
 
     public static  Boolean enabled = Boolean.TRUE;
 
-    private ClickStateButton button ;
+    public ClickStateButton button ;
 
-    public EnableBufferingListener(ClickStateButton btn) {
+    public EnableListener(ClickStateButton btn) {
         super(btn);
         this.button = btn;
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        if(enabled == null ) enabled = Boolean.TRUE;
         button.click();
         enabled = !enabled;
         if(enabled){
-            button.setLabel("Disable Text Buffer");
-            ClipBoard.getInstance().setClipboardText(ClipBoard.getInstance().getBoardText());
+            button.setLabel("Disable Button");
         }else{
-            button.setLabel("Enable Text Buffer");
+            button.setLabel("Enable Button");
         }
 
     }

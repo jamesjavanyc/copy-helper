@@ -1,6 +1,8 @@
+package test;
+
 /**
  * @projectName:PACKAGE_NAME
- * @className: Test
+ * @className: test.Test
  * @description:
  * @TODO:
  * @author: James

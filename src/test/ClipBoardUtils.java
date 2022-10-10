@@ -1,4 +1,4 @@
-package clipboard;
+package test;
 
 import java.awt.*;
 import java.awt.datatransfer.*;
@@ -6,7 +6,7 @@ import java.io.IOException;
 
 /**
  * @projectName:PACKAGE_NAME
- * @className: Test
+ * @className: test.Test
  * @description:
  * @TODO:
  * @author: James
